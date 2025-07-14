@@ -86,11 +86,18 @@ body {
 }
 
 section.hero {
+  @media (min-width: 0px) {
+    flex-direction: column-reverse;
+    gap: 48px;
+  }
+  @media (min-width: 992px) {
+    flex-direction: row;
+    gap: 128px;
+  }
   display: flex;
   align-items: center;
   height: 100vh;
   justify-content: center;
-  gap: 128px;
   div.left {
     max-width: 400px;
     h1 {
