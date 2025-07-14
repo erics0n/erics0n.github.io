@@ -98,7 +98,7 @@ section.hero {
   }
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: 100dvh;
   justify-content: center;
   div.left {
     max-width: 400px;
