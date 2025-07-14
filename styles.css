@@ -89,10 +89,12 @@ section.hero {
   @media (min-width: 0px) {
     flex-direction: column-reverse;
     gap: 48px;
+    padding: 24px;
   }
   @media (min-width: 992px) {
     flex-direction: row;
     gap: 128px;
+    padding: 48px;
   }
   display: flex;
   align-items: center;
