@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*RESETS*/
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #151515;
+  color: #7d7d7d;
+}
+
+section.hero {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  gap: 128px;
+  div.left {
+    max-width: 400px;
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 100%;
+      color: #7d7d7d;
+    }
+    h2 {
+      line-height: 100%;
+      font-size: 2.28rem;
+      font-weight: 600;
+      color: #9eb3d6;
+    }
+    h3 {
+      font-weight: 300;
+      font-size: 1rem;
+      margin-top: 8px;
+      color: #7d7d7d;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    p {
+      margin: 24px 0px;
+      font-size: 0.8rem;
+      border-left: 2px solid #7d7d7d;
+      padding-left: 8px;
+    }
+
+    a {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      display: inline-flex;
+      color: #7d7d7d;
+      text-decoration: none;
+      background-color: #151515;
+      border: 1px solid #202020;
+      box-shadow: 2px 2px #202020;
+      gap: 8px;
+      padding: 4px 8px;
+      span {
+        padding-left: 8px;
+        border-left: 1px solid #7d7d7d;
+      }
+      &:hover {
+        color: #151515;
+        background-color: #7d7d7d;
+        box-shadow: 2px 2px #7d7d7d;
+        transition: all 0.1s linear;
+        & span {
+          transition: all 0.1s linear;
+          border-left: 1px solid #151515;
+        }
+      }
+    }
+  }
+  div.right {
+    position: relative;
+    .image-wrap {
+      position: relative;
+      height: 256px;
+      width: 256px;
+      max-height: 256px;
+      max-width: 256px;
+      img {
+        height: 256px;
+        width: 256px;
+        border: 0px solid #202020;
+        border-radius: 9999px;
+      }
+    }
+    /* Source: https://cssloaders.github.io/ */
+    .loader {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 256px;
+      height: 256px;
+      border: 5px solid #202020;
+      border-bottom-color: #7d7d7d;
+      border-radius: 50%;
+      display: inline-block;
+      box-sizing: border-box;
+      animation: rotation 2s linear infinite;
+    }
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
